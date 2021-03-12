@@ -1,0 +1,17 @@
+CREATE TABLE `pokedex`.`pokemons` (
+	`id` INT(11) NOT NULL AUTO_INCREMENT ,
+	`name` VARCHAR(255) NOT NULL ,
+	`type1` VARCHAR(255) NOT NULL ,
+	`type2` VARCHAR(255) NOT NULL ,
+	PRIMARY KEY (`id`)
+) ENGINE = InnoDB;
+
+INSERT INTO `pokemons` (`id`, `name`, `type1`, `type2`) VALUES (NULL, 'Bulbasaur', 'Grass', 'Poison');
+
+SELECT * FROM `pokemons`
+
+UPDATE `pokemons` SET `type1` = 'Grass', `type2` = 'Poison' WHERE `pokemons`.`id` = 2;
+
+SELECT * FROM `pokemons` WHERE `id` = 3
+
+DELETE FROM `pokemons` WHERE `pokemons`.`id` = 3
